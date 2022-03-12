@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="620.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageStudentRegistrationFormController">
+   <children>
+      <ImageView fitHeight="620.0" fitWidth="900.0" opacity="0.3" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../assets/bank.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblDate" layoutX="338.0" layoutY="428.0" prefHeight="26.0" prefWidth="165.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="605.0" layoutY="428.0" prefHeight="26.0" prefWidth="165.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutY="-1.0" prefHeight="53.0" prefWidth="498.0" text="STUDENT REGISTRATION" textAlignment="CENTER" underline="true" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtRegNum" focusColor="#001f9a" labelFloat="true" layoutX="42.0" layoutY="63.0" onKeyReleased="#studentKeyEvent" prefHeight="18.0" prefWidth="148.0" promptText="Reg.No">
+         <font>
+            <Font size="11.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtName" focusColor="#001f9a" labelFloat="true" layoutX="429.0" layoutY="62.0" onKeyReleased="#studentKeyEvent" prefHeight="18.0" prefWidth="329.0" promptText="Name">
+         <font>
+            <Font size="11.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtAge" focusColor="#001f9a" labelFloat="true" layoutX="42.0" layoutY="101.0" onKeyReleased="#studentKeyEvent" prefHeight="18.0" prefWidth="61.0" promptText="Age">
+         <font>
+            <Font size="11.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtNIC" focusColor="#001f9a" labelFloat="true" layoutX="429.0" layoutY="100.0" onKeyReleased="#studentKeyEvent" prefHeight="25.0" prefWidth="198.0" promptText="NIC">
+         <font>
+            <Font size="11.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtContactNumber" focusColor="#001f9a" labelFloat="true" layoutX="42.0" layoutY="141.0" onKeyReleased="#studentKeyEvent" prefHeight="25.0" prefWidth="198.0" promptText="Contact Number">
+         <font>
+            <Font size="11.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtAddress" focusColor="#001f9a" labelFloat="true" layoutX="42.0" layoutY="184.0" onKeyReleased="#studentKeyEvent" prefHeight="25.0" prefWidth="198.0" promptText="Address">
+         <font>
+            <Font size="11.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtDOB" focusColor="#001f9a" labelFloat="true" layoutX="427.0" layoutY="184.0" onKeyReleased="#studentKeyEvent" prefHeight="25.0" prefWidth="165.0" promptText="DOB">
+         <font>
+            <Font size="11.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtEmail" focusColor="#001f9a" labelFloat="true" layoutX="609.0" layoutY="184.0" onKeyReleased="#studentKeyEvent" prefHeight="25.0" prefWidth="240.0" promptText="E-Mail">
+         <font>
+            <Font size="11.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtSearch" labelFloat="true" layoutX="48.0" layoutY="428.0" onKeyReleased="#keyEvent" prefHeight="25.0" prefWidth="212.0" promptText="Search" unFocusColor="BLACK">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXTextField>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#0004ff94" height="169.0" layoutX="19.0" layoutY="243.0" opacity="0.2" stroke="BLACK" strokeType="INSIDE" width="878.0" AnchorPane.bottomAnchor="208.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="243.0" />
+      <JFXComboBox fx:id="cmbProgramId1" labelFloat="true" layoutX="71.0" layoutY="273.0" prefHeight="26.0" prefWidth="132.0" promptText="Programme ID" />
+      <JFXTextField fx:id="txtPName1" labelFloat="true" layoutX="233.0" layoutY="274.0" prefHeight="25.0" prefWidth="132.0" promptText="Program">
+         <font>
+            <Font size="10.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtFee1" labelFloat="true" layoutX="523.0" layoutY="274.0" prefHeight="25.0" prefWidth="107.0" promptText="Fee(LKR)">
+         <font>
+            <Font size="10.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtDuration1" labelFloat="true" layoutX="393.0" layoutY="274.0" prefHeight="25.0" prefWidth="97.0" promptText="Duration">
+         <font>
+            <Font size="10.0" />
+         </font></JFXTextField>
+      <JFXComboBox fx:id="cmbProgramId2" layoutX="71.0" layoutY="318.0" prefHeight="26.0" prefWidth="132.0" promptText="Programme ID" />
+      <JFXTextField fx:id="txtPName2" labelFloat="true" layoutX="233.0" layoutY="319.0" prefHeight="25.0" prefWidth="132.0" promptText="Program">
+         <font>
+            <Font size="10.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtFee2" labelFloat="true" layoutX="523.0" layoutY="319.0" prefHeight="25.0" prefWidth="107.0" promptText="Fee(LKR)">
+         <font>
+            <Font size="10.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtDuration2" labelFloat="true" layoutX="393.0" layoutY="319.0" prefHeight="25.0" prefWidth="97.0" promptText="Duration">
+         <font>
+            <Font size="10.0" />
+         </font></JFXTextField>
+      <JFXComboBox fx:id="cmbProgramId3" layoutX="70.0" layoutY="366.0" prefHeight="26.0" prefWidth="132.0" promptText="Programme ID" />
+      <JFXTextField fx:id="txtPName3" labelFloat="true" layoutX="232.0" layoutY="367.0" prefHeight="25.0" prefWidth="132.0" promptText="Program">
+         <font>
+            <Font size="10.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtFee3" labelFloat="true" layoutX="524.0" layoutY="367.0" prefHeight="25.0" prefWidth="107.0" promptText="Fee(LKR)">
+         <font>
+            <Font size="10.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtDuration3" labelFloat="true" layoutX="392.0" layoutY="367.0" prefHeight="25.0" prefWidth="97.0" promptText="Duration">
+         <font>
+            <Font size="10.0" />
+         </font></JFXTextField>
+      <Button layoutX="689.0" layoutY="372.0" mnemonicParsing="false" onAction="#removeProgramOnAction" prefHeight="23.0" prefWidth="165.0" stylesheets="@styles/red%2520button.css" text="REMOVE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnAdd" layoutX="687.0" layoutY="283.0" mnemonicParsing="false" onAction="#saveProgramOnAction" prefHeight="23.0" prefWidth="165.0" stylesheets="@styles/blue%2520button.css" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="689.0" layoutY="327.0" mnemonicParsing="false" onAction="#updateProgramOnAction" prefHeight="23.0" prefWidth="165.0" stylesheets="@styles/green%20button.css" text="Add Program" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <JFXRadioButton fx:id="txtMale" layoutX="428.0" layoutY="141.0" prefHeight="26.0" prefWidth="59.0" selected="true" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+         <font>
+            <Font size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXRadioButton>
+      <RadioButton fx:id="txtFemale" layoutX="511.0" layoutY="141.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" selected="true" text="Female" toggleGroup="$gender">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <JFXCheckBox fx:id="cb" layoutX="45.0" layoutY="283.0" mouseTransparent="true" selected="true" text=" " />
+      <JFXCheckBox fx:id="cb2" layoutX="45.0" layoutY="328.0" onMouseClicked="#onMouseClick" text=" " />
+      <JFXCheckBox fx:id="cb3" layoutX="45.0" layoutY="375.0" onMouseClicked="#onMouseClick" text=" " />
+      <ImageView fx:id="imgHome" fitHeight="53.0" fitWidth="59.0" layoutX="799.0" layoutY="26.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="26.0">
+         <image>
+            <Image url="@../assets/home%20(1).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TableView fx:id="tblStudent" layoutX="22.0" layoutY="438.0" prefHeight="134.0" prefWidth="860.0" stylesheets="@styles/tableeffect.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="466.0">
+        <columns>
+          <TableColumn fx:id="colRegNum" prefWidth="60.0" text="Reg.No" />
+          <TableColumn fx:id="colName" prefWidth="118.0" text="Name" />
+            <TableColumn fx:id="colAge" prefWidth="44.0" text="Age" />
+            <TableColumn fx:id="colNIC" prefWidth="105.0" text="NIC" />
+            <TableColumn fx:id="colContact" prefWidth="78.0" text="Contact" />
+            <TableColumn fx:id="colAddress" prefWidth="132.0" text="Address" />
+            <TableColumn fx:id="colDOB" prefWidth="51.0" text="DOB" />
+            <TableColumn fx:id="colEmail" prefWidth="180.0" text="E-Mail" />
+            <TableColumn fx:id="colGender" prefWidth="109.0" text="Gender" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Label fx:id="txtConfimation" alignment="CENTER" layoutX="403.0" layoutY="218.0" text=" " textFill="RED" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

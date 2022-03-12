@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="620.0" prefWidth="900.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationDeatilsFormController">
+   <children>
+      <ImageView fitHeight="620.0" fitWidth="900.0" opacity="0.3" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../assets/bank.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="390.0" layoutY="4.0" prefHeight="37.0" prefWidth="844.0" text="REGISTRATION DETAILS" textAlignment="CENTER" underline="true" wrapText="true" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtSearch" labelFloat="true" layoutX="21.0" layoutY="91.0" onKeyReleased="#keyEvent" prefHeight="28.0" prefWidth="248.0" promptText="Search" unFocusColor="BLACK">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblDate" layoutX="504.0" layoutY="91.0" prefHeight="28.0" prefWidth="165.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="324.0" layoutY="91.0" prefHeight="28.0" prefWidth="165.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="40.0" layoutY="360.0" prefHeight="28.0" prefWidth="211.0" text="COURSE DETAILS" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="525.0" layoutY="128.0" prefHeight="28.0" prefWidth="222.0" text="STUDENT DETAILS" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgHome" fitHeight="61.0" fitWidth="61.0" layoutX="799.0" layoutY="28.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="26.0">
+         <image>
+            <Image url="@../assets/home%20(1).png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <TableView fx:id="tblStudent" layoutX="14.0" layoutY="157.0" prefHeight="190.0" prefWidth="880.0" stylesheets="@styles/tableeffect.css" AnchorPane.bottomAnchor="273.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="157.0">
+        <columns>
+          <TableColumn fx:id="colRegNum" prefWidth="60.0" text="Reg.No" />
+          <TableColumn fx:id="colName" prefWidth="147.0" text="Name" />
+            <TableColumn fx:id="colAge" prefWidth="42.0" text="Age" />
+            <TableColumn fx:id="colNIC" prefWidth="120.0" text="NIC" />
+            <TableColumn fx:id="colContact" text="Contact" />
+            <TableColumn fx:id="colAddress" prefWidth="106.0" text="Address" />
+            <TableColumn fx:id="colDOB" prefWidth="85.0" text="DOB" />
+            <TableColumn fx:id="colEmail" prefWidth="163.0" text="E-Mail" />
+            <TableColumn fx:id="colGender" prefWidth="76.0" text="Gender" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <TableView fx:id="tblProgram" layoutX="21.0" layoutY="393.0" prefHeight="217.0" prefWidth="880.0" stylesheets="@styles/tableeffect.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="393.0">
+        <columns>
+          <TableColumn fx:id="colProgramId" prefWidth="126.0" text="Programme ID" />
+          <TableColumn fx:id="colProgramName" prefWidth="363.0" text="Programme Name" />
+            <TableColumn fx:id="colDuration" prefWidth="112.0" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="227.0" text="Fee(LKR)" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+   </children>
+</AnchorPane>
